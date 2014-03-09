@@ -1475,7 +1475,7 @@ var bugsense;
       // Ignore bugsense raised exception
       if (window.bugsense.isBugsenseException(exception))
         return false;
-      bugsense.trigger('crash');
+      window.bugsense.trigger('crash');
       return window.bugsense.notify(exception, url, line, column, custom_data);
     },
     onpromiseerror: function(event) {
